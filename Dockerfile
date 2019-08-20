@@ -38,6 +38,7 @@ RUN apk --update --virtual build-deps add \
         libxml2 \
         mysql-client \
         nodejs-npm \
+		redis \
         postgresql && \
     pecl install \
         apcu \
