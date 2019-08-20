@@ -36,6 +36,7 @@ RUN apk --update --virtual build-deps add \
         libpng \
         libltdl \
         libxml2 \
+		libzip-dev \
         mysql-client \
         nodejs-npm  \
         postgresql && \
