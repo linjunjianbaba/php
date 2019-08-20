@@ -37,8 +37,7 @@ RUN apk --update --virtual build-deps add \
         libltdl \
         libxml2 \
         mysql-client \
-        nodejs-npm \
-		redis \
+        nodejs-npm  \
         postgresql && \
     pecl install \
         apcu \
@@ -63,8 +62,7 @@ RUN apk --update --virtual build-deps add \
         mbstring \
         opcache \
         pdo_mysql \
-        pdo_pgsql \
-        redis && \
+        pdo_pgsql && \
     apk del \
         build-deps
 
