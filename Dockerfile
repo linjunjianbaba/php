@@ -42,8 +42,8 @@ RUN apk --update --virtual build-deps add \
     pecl install \
         apcu \
         imagick \
-        mcrypt-1.0.0 \
-        redis-4.3.0 && \
+        mcrypt-1.0.0 && \
+	pecl install -o -f redis && \
     docker-php-ext-configure gd \
         --with-gd \
         --with-freetype-dir=/usr/include/ \
@@ -68,7 +68,7 @@ RUN apk --update --virtual build-deps add \
         build-deps
 
 RUN echo "extension=apcu.so" > /usr/local/etc/php/conf.d/pecl-apcu.ini \
- && echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini
+ && echo "extension=imagick.so" > /usr/local/etc/php/conf.d/pecl-imagick.ini && echo "extension=redis.so" > /usr/local/etc/php/conf.d/redis.ini
 
 ENV MEMCACHED_DEPS zlib-dev libmemcached-dev cyrus-sasl-dev git
 
