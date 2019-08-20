@@ -2,7 +2,7 @@
 # ==============================================
 
 
-FROM php:7.3-fpm-alpine
+FROM php:7.2-fpm-alpine
 
 # Install system packages & PHP extensions required for Yii 2.0 Framework
 RUN apk --update --virtual build-deps add \
