@@ -29,6 +29,7 @@ RUN apk --update --virtual build-deps add \
         icu \
         imagemagick \
         pcre \
+	ffmpeg \
         freetype \
         libmcrypt \
         libintl \
@@ -36,7 +37,7 @@ RUN apk --update --virtual build-deps add \
         libpng \
         libltdl \
         libxml2 \
-		libzip-dev \
+        libzip-dev \
         mysql-client \
         nodejs-npm  \
         postgresql && \
